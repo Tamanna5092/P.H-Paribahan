@@ -6,3 +6,7 @@
 .raleway{
     font-family: "Raleway", sans-serif;
 }
+.btn-container button{
+    width: 110px;
+    padding: 10px 50px;
+}
