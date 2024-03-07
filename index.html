@@ -210,73 +210,73 @@
             <div class="btn-container space-y-6 mt-6">
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">A</p>
-                <button class="btn">A1</button>
-                <button class="btn">A2</button>
-                <button class="btn">A3</button>
-                <button class="btn">A4</button>
+                <button class="add-btn">A1</button>
+                <button class="add-btn">A2</button>
+                <button class="add-btn">A3</button>
+                <button class="add-btn">A4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">B</p>
-                <button class="btn">B1</button>
-                <button class="btn">B2</button>
-                <button class="btn">B3</button>
-                <button class="btn">B4</button>
+                <button class="add-btn">B1</button>
+                <button class="add-btn">B2</button>
+                <button class="add-btn">B3</button>
+                <button class="add-btn">B4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">C</p>
-                <button class="btn">C1</button>
-                <button class="btn">C2</button>
-                <button class="btn">C3</button>
-                <button class="btn">C4</button>
+                <button class="add-btn">C1</button>
+                <button class="add-btn">C2</button>
+                <button class="add-btn">C3</button>
+                <button class="add-btn">C4</button>
               </div>
              <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">D</p>
-                <button class="btn">D1</button>
-                <button class="btn">D2</button>
-                <button class="btn">D3</button>
-                <button class="btn">D4</button>
+                <button class="add-btn">D1</button>
+                <button class="add-btn">D2</button>
+                <button class="add-btn">D3</button>
+                <button class="add-btn">D4</button>
              </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">E</p>
-                <button class="btn">E1</button>
-                <button class="btn">E2</button>
-                <button class="btn">E3</button>
-                <button class="btn">E4</button>
+                <button class="add-btn">E1</button>
+                <button class="add-btn">E2</button>
+                <button class="add-btn">E3</button>
+                <button class="add-btn">E4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">F</p>
-                <button class="btn">F1</button>
-                <button class="btn">F2</button>
-                <button class="btn">F3</button>
-                <button class="btn">F4</button>
+                <button class="add-btn">F1</button>
+                <button class="add-btn">F2</button>
+                <button class="add-btn">F3</button>
+                <button class="add-btn">F4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">G</p>
-                <button class="btn">G1</button>
-                <button class="btn">G2</button>
-                <button class="btn">G3</button>
-                <button class="btn">G4</button>
+                <button class="add-btn">G1</button>
+                <button class="add-btn">G2</button>
+                <button class="add-btn">G3</button>
+                <button class="add-btn">G4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">H</p>
-                <button class="btn">H1</button>
-                <button class="btn">H2</button>
-                <button class="btn">H3</button>
-                <button class="btn">H4</button>
+                <button class="add-btn">H1</button>
+                <button class="add-btn">H2</button>
+                <button class="add-btn">H3</button>
+                <button class="add-btn">H4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-9 pt-3">I</p>
-                <button class="btn">I1</button>
-                <button class="btn">I2</button>
-                <button class="btn">I3</button>
-                <button class="btn">I4</button>
+                <button class="add-btn">I1</button>
+                <button class="add-btn">I2</button>
+                <button class="add-btn">I3</button>
+                <button class="add-btn">I4</button>
               </div>
               <div class="flex justify-between">
                 <p class="text-[#03071280] font-medium font-[inter] ml-8 pt-3">J</p>
-                <button class="btn">J1</button>
-                <button class="btn">J2</button>
-                <button class="btn">J3</button>
-                <button class="btn">J4</button>
+                <button class="add-btn">J1</button>
+                <button class="add-btn">J2</button>
+                <button class="add-btn">J3</button>
+                <button class="add-btn">J4</button>
               </div>
             </div>
           </div>
@@ -287,7 +287,7 @@
             <!-- selected sit -->
             <div class="mr-4 bg-[#F7F8F8] p-4 rounded-xl mt-5">
               <div class="flex justify-between font-[inter] font-medium pb-4">
-                <h4>Seat <span class="bg-[#1DD100] px-3 rounded-md">2</span></h4>
+                <h4>Seat <span id="seat-count" class="bg-[#1DD100] px-3 rounded-md">0</span></h4>
                 <h4 class="mr-12">Class</h4>
                 <h4>Price</h4>
              </div>
@@ -343,7 +343,7 @@
         </section>
         </div>
         <!-- booking section -->
-        <section class="bg-[#F7F8F8] pb-40">
+        <section class="bg-[#F7F8F8] pb-40 hidden">
           <div class="card w-3/5 bg-white text-center mx-auto">
              <div class="my-10">
               <div class="flex justify-center">
