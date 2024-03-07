@@ -6,7 +6,13 @@ for(const btn of allBtn){
         count = count + 1;
 
         const seatName = event.target.innerText;
-        console.log()
+        // console.log(seatName)
+        const selectedSeat = document.getElementById('seat-name');
+
+        const p = document.createElement('p');
+        p.innerText = seatName;
+        
+        selectedSeat.appendChild(p);
 
         setInnerText('seat-count',count)
     });
