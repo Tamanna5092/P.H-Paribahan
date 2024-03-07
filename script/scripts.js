@@ -4,7 +4,14 @@ let count = 0;
 for(const btn of allBtn){
     btn.addEventListener('click',function(event){
         count = count + 1;
-        console.log(count)
-        document.getElementById('seat-count').innerText = count;
+
+        const seatName = event.target.innerText;
+        console.log()
+
+        setInnerText('seat-count',count)
     });
+}
+
+function setInnerText(id,value){
+    document.getElementById(id).innerText = value;
 }
