@@ -7,12 +7,23 @@ for(const btn of allBtn){
 
         const seatName = event.target.innerText;
         // console.log(seatName)
-        const selectedSeat = document.getElementById('seat-name');
 
-        const p = document.createElement('p');
-        p.innerText = seatName;
+        const selectedSeat = document.getElementById('seat-name');
+        const economyClass = document.getElementById('economoy');
+        const price = document.getElementById('price');
+
+        const li = document.createElement('li');
+        li.innerText = seatName;
         
-        selectedSeat.appendChild(p);
+        const li2 = document.createElement('li');
+        li2.innerText = 'Economoy';
+
+        const li3 = document.createElement('li');
+        li3.innerText = '550'
+
+        selectedSeat.appendChild(li);
+        economyClass.appendChild(li2);
+        price.appendChild(li3)
 
         setInnerText('seat-count',count)
     });
