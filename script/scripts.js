@@ -20,12 +20,25 @@ for(const btn of allBtn){
 
         const li3 = document.createElement('li');
         li3.innerText = '550'
+        console.log(li3)
 
         selectedSeat.appendChild(li);
         economyClass.appendChild(li2);
         price.appendChild(li3)
 
-        setInnerText('seat-count',count)
+
+
+        const totalCost = document.getElementById('total-cost').innerText;
+        const convertedTotalCost = parseInt(totalCost);
+        const sum = convertedTotalCost + parseInt(li3.innerText);
+
+        const grandTotalCost = document.getElementById('grand-total').innerText;
+        const convertedGrandTotalCost = parseInt(grandTotalCost);
+        const sum2 = convertedGrandTotalCost + sum;
+
+        setInnerText('total-cost',sum);
+        setInnerText('grand-total',sum2);
+        setInnerText('seat-count',count);
     });
 }
 
