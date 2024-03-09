@@ -7,12 +7,13 @@ for(const btn of allBtn){
 
         const totalSeat = document.getElementById('seat-left').innerText
         const totalSeatLeft = totalSeat - 1;
-        if(totalSeatLeft <= 0){
+        if(totalSeatLeft == -1){
             alert('No seat available')
+            return
         }
-        
-        const seatName = event.target.innerText;
-        // console.log(seatName)
+        event.target.style.backgroundColor = 'rgb(29,209,0)';
+
+        const seatName = event.target.innerText; 
 
         const selectedSeat = document.getElementById('seat-name');
         const economyClass = document.getElementById('economoy');
@@ -51,14 +52,15 @@ function totalCost(id,value){
     setInnerText('total-cost',sum);
 }
 
-function grandTotalCost(category){
+function grandTotalCost(coupon){
     const totalCost = document.getElementById('total-cost').innerText;
     const convertedTotalCost = parseInt(totalCost);
+    console.log(convertedTotalCost);
     
-    if(category == 'NEW15'){
+    if(coupon == 'NEW15'){
         setInnerText('grand-total',convertedTotalCost - (totalCost * 15 / 100));
     }
-    else if(category == 'Couple20'){
+    else if(coupon == 'Couple20'){
         setInnerText('grand-total',convertedTotalCost - (totalCost * 20 / 100));
     }
     else{
