@@ -124,7 +124,7 @@
         </section>
         
           <!-- ph poribahan and ticket section -->
-        <div class="bg-[#F7F8F8] h-auto pb-36 rounded-xl">
+        <div  id="ticker-section-container" class="bg-[#F7F8F8] h-auto pb-36 rounded-xl">
           <!-- ph poribahan -->
           <section class="mt-28 px-4">
             <h1 class="text-4xl font-bold text-center font-[raleway] pt-20">P.H Paribahan</h1>
@@ -307,7 +307,7 @@
              <!-- input area -->
              <div class="relative">
               <input type="text" placeholder="Have any copupon?" class="input input-bordered w-full" />
-              <button class="absolute bg-[#1DD100] text-white font-semibold font-[inter] right-2 top-1 px-4 py-2 rounded-lg">Apply</button>
+              <button onclick="grandTotalCost('coupon')" class="absolute bg-[#1DD100] text-white font-semibold font-[inter] right-2 top-1 px-4 py-2 rounded-lg">Apply</button>
              </div>
              <div class="flex justify-between font-medium font-[inter] my-5">
               <h2>Grand Total</h2>
@@ -328,7 +328,7 @@
                 <h3 class="my-4 font-[inter] font-semibold">Email ID</h3>
               <input type="email" placeholder="Enter your email id" class="input input-bordered w-full"/>
               </label>
-              <button class="w-full bg-[#1DD100] text-xl font-bold font-[raleway] my-8 py-3 rounded-2xl">Next</button>
+              <button onclick="nextButton()" class="w-full bg-[#1DD100] text-xl font-bold font-[raleway] my-8 py-3 rounded-2xl">Next</button>
              </div>
              <!-- terms and condition policy -->
              <div class="flex justify-around font-[inter] text-[#03071299] mr-3">
@@ -340,7 +340,7 @@
         </section>
         </div>
         <!-- booking section -->
-        <section class="bg-[#F7F8F8] pb-40 hidden">
+        <section id="booking-section" class="bg-[#F7F8F8] py-40 hidden">
           <div class="card w-3/5 bg-white text-center mx-auto">
              <div class="my-10">
               <div class="flex justify-center">
