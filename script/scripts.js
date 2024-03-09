@@ -5,6 +5,12 @@ for(const btn of allBtn){
     btn.addEventListener('click',function(event){
         count = count + 1;
 
+        const totalSeat = document.getElementById('seat-left').innerText
+        const totalSeatLeft = totalSeat - 1;
+        if(totalSeatLeft <= 0){
+            alert('No seat available')
+        }
+        
         const seatName = event.target.innerText;
         // console.log(seatName)
 
@@ -24,17 +30,13 @@ for(const btn of allBtn){
 
         selectedSeat.appendChild(li);
         economyClass.appendChild(li2);
-        price.appendChild(li3)
-
- 
-        // const element = document.getElementsByClassName('add-btn');
-        // element.classList.add('bg-green-500');
-        // setBackgroundColorByClassName(element)
+        price.appendChild(li3);
   
         totalCost('total-cost', li3.innerText);
         grandTotalCost('grand-total', li3.innerText);
         
         setInnerText('seat-count',count);
+        setInnerText('seat-left',totalSeatLeft);
     });
 }
 
