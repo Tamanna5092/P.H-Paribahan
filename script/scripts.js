@@ -8,11 +8,12 @@ for(const btn of allBtn){
         const totalSeat = document.getElementById('seat-left').innerText
         const totalSeatLeft = totalSeat - 1;
         if(totalSeatLeft == -1){
-            alert('No seat available')
+            alert('No seat available!')
             return
         }
 
         event.target.style.backgroundColor = 'rgb(29,209,0)';
+        event.target.setAttribute('disabled', true);
 
         const seatName = event.target.innerText; 
 
@@ -53,16 +54,16 @@ function totalCost(id,value){
     setInnerText('total-cost',sum);
 }
 
+
 function grandTotalCost(coupon){
     const totalCost = document.getElementById('total-cost').innerText;
     const convertedTotalCost = parseInt(totalCost);
-    console.log(convertedTotalCost);
     
     if(coupon == 'NEW15'){
         setInnerText('grand-total',convertedTotalCost - (totalCost * 15 / 100).toFixed(0));
     }
     else if(coupon == 'Couple20'){
-        setInnerText('grand-total',convertedTotalCost - (totalCost * 20 / 100).toFixed);
+        setInnerText('grand-total',convertedTotalCost - (totalCost * 20 / 100).toFixed(0));
     }
     else{
         setInnerText('grand-total',convertedTotalCost);
@@ -72,6 +73,7 @@ function applyCoupon(){
     const couponCode = document.getElementById('coupon').value;
     grandTotalCost(couponCode);
 }
+
 
 function nextButton(){
     const ticketSectionContainer = document.getElementById('ticker-section-container');
